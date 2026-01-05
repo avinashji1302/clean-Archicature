@@ -10,7 +10,7 @@ class AuthRepostoryImp  implements  AuthRepository{
 
 
     final AuthRemoteDatasource authRemoteDatasource;
-    AuthRepostoryImp(this.authRemoteDatasource);
+    AuthRepostoryImp({ required this.authRemoteDatasource});
 
   @override
   Future<Either<Failure, UserEntity>> getCurrentUser() async {

@@ -15,8 +15,10 @@ abstract class AuthRemoteDatasource {
 }
 
 class AuthRemoteDatasourceImp implements AuthRemoteDatasource {
-  final FirebaseAuth _firebase = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
+  final FirebaseAuth _firebase ;
+  final GoogleSignIn _googleSignIn ;
+
+  AuthRemoteDatasourceImp(this._firebase, this._googleSignIn );
 
   @override
   Future<UserModel?> getCurrentUser() async {

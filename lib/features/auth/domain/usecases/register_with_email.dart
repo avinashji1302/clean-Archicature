@@ -8,7 +8,7 @@ class RegisterWithEmail {
 
   RegisterWithEmail(this.authRepository);
 
-  Future<Either<Failure,UserEntity>> call(String name, String email, String,password){
+  Future<Either<Failure,UserEntity>> call(String name, String email, String password){
     return  authRepository.registerWithEmail(name, email, password);
   }
 }
